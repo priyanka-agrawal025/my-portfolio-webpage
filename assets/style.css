@@ -11,6 +11,7 @@ body{
 header, footer {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: #55566D;
     border-style: groove;
     border-radius: 5px;
@@ -19,6 +20,7 @@ header, footer {
 
 header li, footer li {
     display: inline;
+    border-radius: 5px;
     background-color: #55566D;
     text-decoration: none;
     color: #464967;
@@ -76,10 +78,15 @@ main li img {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-60%, -50%);
+    transform: translate(-55%, -50%);
     text-align: center;
     color: white;
     font-size: 16px;
+}
+
+#about-me img {
+    width: 200px;
+    border-radius: 5px;
 }
 
 main p img:hover {
@@ -90,4 +97,29 @@ main p img:hover {
 main li img:hover {
     opacity: 0.3;
     transition: 0.5s ease-in;
+}
+
+@media screen and (max-width: 992px) {
+    header, footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header li, footer li {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    main p img {
+        width: 100%;
+    }
+    .img-text {
+        font-size: 16px;
+    }
 }
